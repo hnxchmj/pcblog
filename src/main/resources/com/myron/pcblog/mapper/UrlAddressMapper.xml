@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myron.pcblog.mapper.UrlAddressMapper">
+    <select id="getByProjectName" resultType="com.myron.pcblog.model.UrlAddress">
+        SELECT
+         project_name AS projectName,
+         blog_http AS blogHttp
+         FROM blog WHERE project_name=#{project_name,jdbcType=VARCHAR}
+    </select>
+
+</mapper>

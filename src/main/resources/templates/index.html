@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" contentType="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <link rel="stylesheet" href="assets/css/element-index.css">
+    <link rel="stylesheet" href="assets/css/bloggarden.css">
+    <title>博客园仿</title>
+</head>
+<body>
+<div id="app">
+    <div>
+        <el-container class="is-vertical">
+            <el-header style = "height: 36px;">
+                <el-button type="text" class = "button" @click="toMypage" >黄孟军</el-button>
+                <el-button type="text" class = "button" @click="login" >登录</el-button>
+                <el-button type="text" class = "button" @click="register" >注册</el-button>
+            </el-header>
+            <el-main>
+                <div><h2>博客园</h2></div>
+                <router-view></router-view>
+            </el-main>
+        </el-container>
+    </div>
+</div>
+<!--引入资源-->
+<script src="assets/js/vue.js"></script>
+<script src="assets/js/vue-router.js"></script>
+<script src="assets/js/element-index.js"></script>
+<script src="assets/js/axios.min.js"></script>
+
+<script src="DemoData.js"></script>
+
+<script src="model/Todo.js"></script>
+<script src="utils/CommonUtil.js"></script>
+
+<script src="view/pages/Home.js"></script>
+<script src="view/pages/UserShow.js"></script>
+<script src="view/pages/UserRegister.js"></script>
+<script src="view/pages/UserLogin.js"></script>
+
+
+<script src="app.js"></script>
+</body>
+</html>
